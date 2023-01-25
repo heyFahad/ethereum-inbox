@@ -10,6 +10,8 @@
     "author": "Fahad Javed <Fahad_Javed008@yahoo.com>",
     "license": "MIT",
     "dependencies": {
+        "@truffle/hdwallet-provider": "^2.1.5",
+        "dotenv": "^16.0.3",
         "ganache-cli": "^6.12.2",
         "mocha": "^10.2.0",
         "solc": "^0.4.17",
