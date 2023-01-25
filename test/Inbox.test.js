@@ -30,15 +30,13 @@ describe('Inbox', () => {
 
     it('has a default message', async () => {
         const message = await inbox.methods.message().call();
-        assert.equal(message, INITIAL_MESSAGE_STRING);
+        assert.strictEqual(message, INITIAL_MESSAGE_STRING);
     });
 
     it('can change the message', async () => {
-        await inbox.methods
-            .setMessage(UPDATED_MESSAGE_STRING)
-            .send({ from: accounts[0], gas: '1000000' });
+        await inbox.methods.setMessage(UPDATED_MESSAGE_STRING).send({ from: accounts[0], gas: '1000000' });
 
         const message = await inbox.methods.message().call();
-        assert.equal(message, UPDATED_MESSAGE_STRING);
+        assert.strictEqual(message, UPDATED_MESSAGE_STRING);
     });
 });
